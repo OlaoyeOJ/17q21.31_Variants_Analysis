@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# run_nfcore_rnaseq_T1_vs_T1T3.sh
-# Purpose: Run nf-core/rnaseq for T1 vs T1T3 comparison using Singularity
+# run_nfcore_rnaseq_rs77692262_vs_rs77692262_in_rs79724577_background.sh
+# Purpose: Run nf-core/rnaseq for rs77692262_vs_rs77692262_in_rs79724577_background comparison using Singularity
 # Reference: GRCh38 (custom GTF + FASTA)
 # Requirements: Nextflow ≥22, Singularity/Apptainer
 
