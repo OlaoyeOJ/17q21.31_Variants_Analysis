@@ -1,3 +1,4 @@
+# RNA-seq Analysis Pipelines (nf-core + motifbreakR)
 This repository contains reproducible analysis scripts used for RNA-seq
 processing and downstream differential abundance analysis using nf-core
 pipelines and Singularity. It also includes R scripts for transcription
