@@ -1,0 +1,62 @@
+This repository contains reproducible analysis scripts used for RNA-seq
+processing and downstream differential abundance analysis using nf-core
+pipelines and Singularity. It also includes R scripts for transcription
+factor motif disruption analysis using motifbreakR (GRCh38, dbSNP155).
+
+All scripts are structured for HPC execution and are anonymised for portability.
+## Repository Structure
+
+├── rnaseq/
+│   ├── run_nfcore_rnaseq_WT_vs_rs77692262.sh
+│   ├── run_nfcore_rnaseq_WT_vs_rs79724577_Primary.sh
+│   ├── run_nfcore_rnaseq_rs77692262_Primary_vs_rs77692262_in_rs79724577_background.sh
+│   ├── run_nfcore_rnaseq_rs77692262_vs_rs77692262_in_rs79724577_background.sh
+│   └── ...
+│
+├── differential_abundance/
+│   ├── run_nfcore_differentialabundance_WT_vs_rs77692262.sh
+│   ├── run_nfcore_differentialabundance_WT_vs_rs79724577_Primary.sh
+│   └── ...
+│
+├── motif_analysis/
+│   └── run_motifbreakr_from_rsid.R
+
+## Requirements
+
+- Nextflow (≥22)
+- Singularity or Apptainer
+- nf-core/rnaseq
+- nf-core/differentialabundance
+- R (≥4.2)
+- Bioconductor packages:
+  - motifbreakR
+  - MotifDb
+  - BSgenome
+  - SNPlocs.Hsapiens.dbSNP155.GRCh38
+
+## Running nf-core/rnaseq
+
+Edit the paths in the script and execute:
+
+```bash
+bash rnaseq/run_nfcore_rnaseq_WT_vs_R.sh
+
+bash differential_abundance/run_nfcore_differentialabundance_WT_vs_R.sh
+
+
+---
+
+## Data Availability
+
+Input FASTQ files and count matrices are not included in this repository.
+Paths in scripts are placeholders and should be modified for local environments.
+
+## Genome Build
+
+All analyses use GRCh38 with Ensembl v111 annotation.
+
+## Author
+
+Oyedele J. Olaoye
+PhD Candidate – Functional Genomics
+
